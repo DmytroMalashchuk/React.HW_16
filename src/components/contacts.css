@@ -1,0 +1,33 @@
+body{
+    background-color: darkgray;
+}
+.background-contacts{
+    background-color:floralwhite;
+    width: 250px;
+    margin-left: 45%;
+    margin-top: 50px;
+    padding: 10px;
+    border-radius: 4%;
+}
+.logo{
+    margin-left: 50px;
+    color: forestgreen;
+    font-family: fantasy;
+}
+.input{
+    margin-left: 25px;
+}
+.contact{
+    background-color:khaki;
+    margin-top: 2px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+.info-contact{
+
+}
+.phone{
+    color: red;
+    font-size: 24px;
+    font-weight: bolder;
+}
