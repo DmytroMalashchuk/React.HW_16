@@ -37,16 +37,9 @@ class Contracts extends Component{
     }
     handleSearchChange = (e) => {
         this.setState({search: e.target.value})
-        const foundContacts = [];  
-        const valueToLowCase = (e.target.value).toLowerCase();
-        this.state.contacts.forEach( contact=> {
-            const lastName = contact.lastName.toLowerCase();
-            const firstName = contact.firstName.toLowerCase();
-                if (!(lastName.indexOf((valueToLowCase))) || !(firstName.indexOf((valueToLowCase)))){
-                    foundContacts.push(contact);
-                }
-            })       
-        this.setState({contacts: foundContacts});
+        this.setState({contacts: this.state.contacts.filter(({firstName, lastName})=>
+            firstName.toLowerCase().includes((this.state.search).toLowerCase())||lastName.toLowerCase().includes((this.state.search).toLowerCase())
+        )})
     }
     render(){
         return(
